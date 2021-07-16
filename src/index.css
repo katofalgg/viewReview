@@ -1,107 +1,49 @@
-*{
-  padding: 0;
-  margin: 0;
-  font-family: "Lobster", "Josefin Sans", Helvetica;
-}
+/* 
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
 
-h1 {
-  font-size: 4em;
-  color: #251208 ;
-  text-align: center;
-  padding-top: 30px;
-}
 
-.container {
-  flex: 1;
-  min-height: 800px;
-  margin: 0;
-  background-color: #F9DC8E;
-  background-size: 100%;
-  padding: 0;
-  
-}
 
-.container-header{
-  text-align:center;
-}
 
-button{
-  border-width: 2px;
-  font-size: 23px;
-  float:left;
-  border-color:#251208;
-  background-color: #524943;
-  color: #180b04;
-  width: 200px;
-  height: 45px;
-  display: flex;
-  margin-left: 10px;
-  margin-right: 10px;
-  align-items: center;
-  justify-content: center;
-  border-radius: 10px;
-}
 
-.container-button{
-  display: flex;
-  justify-content: center;
-  align-items:baseline;
-  padding: 20px 0px;
-}
 
-img{
-  width: 230px; 
-}
 
-ul{
-  display: flex;
-  justify-content: space-around;
-  list-style-type: none;
-  flex-wrap: wrap;
-}
 
 title{
   color: #251208;
   padding-top: 100px;
 }
 
-.sign{ 
-  border: 1px solid ; 
-  padding: 15px; 
-  margin: 10px 0 5px 5px; 
-  background:#524943; 
-  justify-content: center;
-  width: 17vw;
-  height: 60vh;
+
+
+
+.login{
   display: flex;
-  align-items: center;
-  align-content: center;
-  flex-direction: column;
+  justify-content:flex-end;
+  align-items: flex-start;
+  padding-top: 10px;
+
+}
+.signOut{
+  height: 35px;
+  width: 90px;
+  font-size: 15px;
+  border-radius: 10px;
+  border-width: 1px;
+  background-color: #f0b761  ;
+  border-color: #0D2387;
 }
 
-.sign figcaption {
-  text-align: center;
-  font-size: auto;
-  margin-top: 10px;
- }
-.search{
+p{
+  padding: 10px;
+}
+.header{
+  grid-column: 1;
   display: flex;
-  justify-content:center;
-  padding-top: 0px;
-  padding-bottom: 0px;
-   
+  justify-content:baseline
 }
-.search-button{
-  background-color: #251208;
-  width: 50px;
-  height: 45px;
-  padding: 0;
-  margin: 0;
-  border: black;
-  border-radius: 0px;
-}
+
+ */

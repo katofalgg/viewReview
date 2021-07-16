@@ -1,13 +1,14 @@
 import React, { useState } from "react";
-
+import classes from './Comman.module.css'
 const Form = () => {
     const [searchEntry, setsearchEntry] = useState('');
     const updateSearchInput = e => {
         setsearchEntry(e.target.value);
     }
     return(
-    <div className='search'>
+      <div className={classes.search}>
         <input
+        className={classes.search_field}
         type="text"
         name="search"
         placeholder="Search..."
@@ -16,7 +17,7 @@ const Form = () => {
         />
         <button 
         type="submit" //кнопка для отправки данных формы на сервер
-        className={`search-button ${searchEntry.trim() ? "active" : null}`}
+        className={`${classes.search_button} ${searchEntry.trim() ? "active" : null}`}
         disabled={!searchEntry.trim()}
         >
         <svg height="32" width="32">
