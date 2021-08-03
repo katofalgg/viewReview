@@ -4,10 +4,10 @@ import styles from "../../styles";
 import classes from './Comman.module.css'
 const Navbar = () => {
     const links = [
-        {path: "/main", name: 'Главная'},
-        {path: "/content_list", name: 'Контент'},
+        {path: "/main", name: 'Все фильмы'},
+        {path: "/content_list", name: 'ТОП-250'},
         {path: "/genres", name: 'Жанры'},
-        {path: "/authors", name: 'Авторы'},
+        {path: "/authors", name: 'Рецензии'},
     ]
 
     return(

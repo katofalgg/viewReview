@@ -10,9 +10,11 @@ const Header = () => {
         <div className={classes.header}>
             <Navbar/>
             <h1 className={classes.title}>ViewReview</h1>
+            <Form/>
+            <div className={classes.log}>
             <Button style={classes.button_log} name={"Sign Out"} onClick={() => setCategory("SignOut")}/>
             <Button style={classes.button_log} name={"Log Out"} onClick={() => setCategory("SignIn")}/>
-            <Form/>
+            </div>
         </div>
     )
 }

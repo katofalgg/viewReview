@@ -7,14 +7,6 @@ const Form = () => {
     }
     return(
       <div className={classes.search}>
-        <input
-        className={classes.search_field}
-        type="text"
-        name="search"
-        placeholder="Search..."
-        onChange={updateSearchInput}
-        value={searchEntry}
-        />
         <button 
         type="submit" //кнопка для отправки данных формы на сервер
         className={`${classes.search_button} ${searchEntry.trim() ? "active" : null}`}
@@ -28,6 +20,14 @@ const Form = () => {
           />
         </svg>
         </button>
+        <input
+        className={classes.search_field}
+        type="text"
+        name="search"
+        placeholder="Search..."
+        onChange={updateSearchInput}
+        value={searchEntry}
+        />
     </div>
     )
 }

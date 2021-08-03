@@ -5,7 +5,7 @@ import Footer from './components/Comman/Footer';
 import Main from './components/Main/Main';
 import Authors from './components/Authors/Authors';
 import { BrowserRouter, Route } from 'react-router-dom';
-import Genres from './components/Genres';
+import Genres from './components/Genres/Genres';
 import Header from './components/Comman/Header';
 import classes from './components/Comman/Comman.module.css'
 import Content_list from './components/Content_list/Content_list';
