@@ -3,7 +3,7 @@
     font-size: 20px;
     float:left;
     background-color:#EF315B;
-    color:#0D2387;
+    color: $colorB;
     width: 80px;
     height: 40px;
     display: flex;
@@ -37,7 +37,11 @@
 img{
     width: 230px; 
 }
-  
+
+ul:hover {
+    transform: scale(2, 2);
+    transition: transform 1.25s;
+}  
 ul{
     display: flex;
     justify-content: space-around;
