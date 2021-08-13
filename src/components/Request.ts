@@ -1,6 +1,6 @@
 
 
-export function sendRequest(method, url) {
+export function sendRequest(method: string, url: string) {
     const headers = {
         'accept' : 'application/json', 
         'X-API-KEY' : '12c15430-9199-4e20-b554-373d3d40df43'
@@ -14,7 +14,6 @@ export function sendRequest(method, url) {
         }
         return response.json().then(error => {
             const e = new Error('Какая-то ошибочка')
-            e.data = error
             throw e
         })
     })

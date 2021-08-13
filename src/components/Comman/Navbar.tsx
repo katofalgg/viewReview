@@ -2,7 +2,7 @@ import React from "react";
 import { Link, NavLink } from "react-router-dom";
 import styles from "../../styles";
 import classes from './Comman.module.css'
-const Navbar = () => {
+const Navbar: React.FC = () => {
     const links = [
         {path: "/main", name: 'Все фильмы'},
         {path: "/content_list", name: 'ТОП-250'},

@@ -1,6 +1,6 @@
 import React from "react";
 
-const Genres = () => {
+const Genres: React.FC = () => {
     return(
         <div>
             <h1>Жанры</h1>

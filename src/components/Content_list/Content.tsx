@@ -1,12 +1,17 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { sendRequest } from '../Request';
 import classes from './Content_list.module.css'
-const Content = ({category}) => {
-    const [films, setFilms] = useState([]);
-    const [loaded, setLoaded] = useState(false);
+
+interface IContentProps {
+    category: string; 
+}
+
+const Content: React.FC <IContentProps>  = ({category}) => {
+    const [films, setFilms] = useState<any[]>([]);
+    const [loaded, setLoaded] = useState<boolean>(false);
     const requestURL = 'https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1'
-    if (category === "Movie") {
-        sendRequest('GET', requestURL)
+        if (category === "Movie") {
+    sendRequest('GET', requestURL)
         .then(response => {
             setFilms(response.films);
             setLoaded(true);
@@ -18,10 +23,8 @@ const Content = ({category}) => {
             );
         }); 
     }
-    
     return(
-        <div className={classes}>
-            <script scr="Request.js"></script>
+        <div>
             <ul>
             {films.map(element => (
             <li> 

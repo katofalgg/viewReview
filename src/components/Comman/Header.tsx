@@ -4,8 +4,8 @@ import React, { Component, useState } from 'react'
 import Button from "./Button";
 import Form from "./Form";
 import classes from './Comman.module.css'
-const Header = () => {
-    const [category, setCategory] = useState();
+const Header: React.FC = () => {
+    const [category, setCategory] = useState<string>();
     return (
         <div className={classes.header}>
             <Navbar/>

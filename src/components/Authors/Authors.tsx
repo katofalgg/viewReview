@@ -1,6 +1,6 @@
 import React from "react";
 
-const Authors = () => {
+const Authors: React.FC  = () => {
     return(
         <div>
             <h1>Авторы</h1>

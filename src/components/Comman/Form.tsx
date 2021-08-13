@@ -1,9 +1,14 @@
 import React, { useState } from "react";
 import classes from './Comman.module.css'
-const Form = () => {
+const Form: React.FC = () => {
     const [searchEntry, setsearchEntry] = useState('');
-    const updateSearchInput = e => {
+    const updateSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setsearchEntry(e.target.value);
+    }
+    const keyPressHandler = (e: React.KeyboardEvent) => {
+      if (e.key === 'Enter'){
+        console.log(searchEntry)
+      }
     }
     return(
       <div className={classes.search}>
@@ -27,6 +32,7 @@ const Form = () => {
         placeholder="Search..."
         onChange={updateSearchInput}
         value={searchEntry}
+        onKeyPress={keyPressHandler}
         />
     </div>
     )

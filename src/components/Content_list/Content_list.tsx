@@ -1,11 +1,10 @@
 import classes from './Content_list.module.css'
-
 import Content from './Content'
-import React, { Component, useState } from 'react'
+import React, { useState } from 'react'
 import Button from '../Comman/Button'
 
-const Content_list = () => {
-    const [category, setCategory] = useState();
+const Content_list: React.FC = () => {
+    const [category, setCategory] = useState<string>('');
     return (
     <>        
         <div className={classes.container_button}> 
