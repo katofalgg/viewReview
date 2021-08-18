@@ -8,6 +8,8 @@ const Navbar: React.FC = () => {
         {path: "/content_list", name: 'ТОП-250'},
         {path: "/genres", name: 'Жанры'},
         {path: "/authors", name: 'Рецензии'},
+        {path: "/login", name: 'Личный кабинет'},
+        {path: "/signup", name: 'Регистрация'},
     ]
 
     return(

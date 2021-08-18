@@ -14,18 +14,18 @@ const Content: React.FC <IContentProps>  = ({category}) => {
         'X-API-KEY' : '12c15430-9199-4e20-b554-373d3d40df43'
     }
     fetch('https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=1', {
-        method: 'POST',
+        method: 'GET',
         headers: headers,
-        body: JSON.stringify({
-            query: `
-            query {
-                pagesCount
-                films {
-                    posterUrl
-                }
-            }
-            `
-        })
+        // body: JSON.stringify({
+        //     query: `
+        //     query {
+        //         pagesCount
+        //         films {
+        //             posterUrl
+        //         }
+        //     }
+        //     `
+        // })
     })
     .then (res => res.json())
     .then (data => {
