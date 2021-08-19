@@ -3,7 +3,6 @@
     font-size: 20px;
     float:left;
     background-color:#EF315B;
-    color: $colorB;
     width: 80px;
     height: 40px;
     display: flex;
@@ -38,9 +37,9 @@ img{
     width: 230px; 
 }
 
-ul:hover {
-    transform: scale(2, 2);
-    transition: transform 1.25s;
+li:hover {
+    transform: scale(1.03, 1.03);
+    transition: transform 1.05s;
 }  
 ul{
     display: flex;

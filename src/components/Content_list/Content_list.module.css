@@ -3,7 +3,6 @@
   font-size: 20px;
   float: left;
   background-color: #EF315B;
-  color: #0D2387;
   width: 80px;
   height: 40px;
   display: -webkit-box;
@@ -54,6 +53,15 @@
 
 img {
   width: 230px;
+}
+
+li:hover {
+  -webkit-transform: scale(1.03, 1.03);
+          transform: scale(1.03, 1.03);
+  -webkit-transition: -webkit-transform 1.05s;
+  transition: -webkit-transform 1.05s;
+  transition: transform 1.05s;
+  transition: transform 1.05s, -webkit-transform 1.05s;
 }
 
 ul {
