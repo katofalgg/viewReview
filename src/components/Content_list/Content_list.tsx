@@ -2,7 +2,7 @@ import classes from './Content_list.module.css'
 import Content from './Content'
 import React, { useState } from 'react'
 import Button from '../Comman/Button'
-import { SSL_OP_NETSCAPE_CHALLENGE_BUG } from 'constants'
+
 
 const Content_list: React.FC = () => {
     const [category, setCategory] = useState<string>('');

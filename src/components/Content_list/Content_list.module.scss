@@ -1,40 +1,30 @@
-.button{
-    border-width: 0;
-    font-size: 20px;
-    float:left;
-    background-color:#EF315B;
-    width: 80px;
-    height: 40px;
-    display: flex;
-    margin-left: 10px;
-    margin-right: 10px;
-    align-items: center;
-    justify-content: center;
-    border-radius: 10px;
-}
+
 .sign{ 
-    border: 1px solid ; 
+    border: 1px solid #355C7D; 
     padding: 15px; 
     margin: 10px 0 5px 5px; 
-    background:#FAC91E  ; 
+    background: #ec5555; 
     justify-content: center;
-    width: 17vw;
-    height: 60vh;
-    min-width: 240px;
+    width: 8vw;
+    height: 40vh;
+    min-width: 210px;
     display: flex;
     align-items: center;
     align-content: center;
     flex-direction: column;
     border-radius: 20px;
+    
 }
   
 .sign figcaption {
     text-align: center;
     font-size: auto;
     margin-top: 10px;
+    color: aliceblue;
 }
 img{
-    width: 230px; 
+    width: 180px;
+    height: 250px; 
 }
 
 li:hover {
@@ -50,6 +40,9 @@ ul{
     padding-bottom: 100px;
     flex: 1;
 }
+.sign p {
+    color: aliceblue;
+}
 .container_button{
     display: flex;
     justify-content: center;
@@ -57,10 +50,16 @@ ul{
     padding: 20px 0px;
     background-size: 100%;
     grid-row: 2;
-    background-color: #F49F1E;
+    background-color: #ec5555;
 }
 .item_container {
-    background-color: #F49F1E;
+    background-color: #ec5555;
     grid-row-start: 3;
     max-height: 2fr;
+}
+
+.button {
+    background-color: #ec5555;
+    height: 49px;
+    
 }

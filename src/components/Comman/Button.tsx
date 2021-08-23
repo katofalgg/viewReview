@@ -8,10 +8,10 @@ interface IButtonProps {
 }
 const Button: React.FC<IButtonProps> = ({style, name, onClick}) => {
     return (
-        <div>
+        <>
             <button className={style} onClick={onClick}> {name}</button>
             
-        </div>
+        </>
     )
 }
 export default Button;

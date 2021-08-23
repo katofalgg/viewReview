@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Content_list.module.css'
 import {sendRequest} from '../Request'
-import classNames from 'classnames';
+
 import Content_list from './Content_list';
 interface IContentProps {
     category: string,

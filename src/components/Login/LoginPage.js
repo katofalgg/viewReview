@@ -24,7 +24,7 @@ const LoginPage= ({history}) => {
         return <Redirect to="/" />;
     }
     return(
-        <div>
+        <>
         <h1>Вход в личный кабинет</h1>
         <form onSubmit={handleLogin}>
           <label>
@@ -37,7 +37,7 @@ const LoginPage= ({history}) => {
           </label>
           <button type="submit">Войти</button>
         </form>
-      </div>
+      </>
     )
 }
 export default withRouter(LoginPage);

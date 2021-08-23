@@ -1,35 +1,14 @@
-.button {
-  border-width: 0;
-  font-size: 20px;
-  float: left;
-  background-color: #EF315B;
-  width: 80px;
-  height: 40px;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  margin-left: 10px;
-  margin-right: 10px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  border-radius: 10px;
-}
-
 .sign {
-  border: 1px solid;
+  border: 4px solid #355C7D;
   padding: 15px;
   margin: 10px 0 5px 5px;
-  background: #FAC91E;
+  background: #fab390;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 17vw;
-  height: 60vh;
-  min-width: 240px;
+  width: 8vw;
+  height: 40vh;
+  min-width: 210px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -49,10 +28,12 @@
   text-align: center;
   font-size: auto;
   margin-top: 10px;
+  color: #112d46;
 }
 
 img {
-  width: 230px;
+  width: 180px;
+  height: 250px;
 }
 
 li:hover {
@@ -80,6 +61,10 @@ ul {
           flex: 1;
 }
 
+.sign p {
+  color: aliceblue;
+}
+
 .container_button {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -94,12 +79,17 @@ ul {
   background-size: 100%;
   -ms-grid-row: 2;
   grid-row: 2;
-  background-color: #F49F1E;
+  background-color: #fab390;
 }
 
 .item_container {
-  background-color: #F49F1E;
+  background-color: #fab390;
   -ms-grid-row: 3;
       grid-row-start: 3;
   max-height: 2fr;
+}
+
+.button {
+  background-color: #fab390;
+  height: 49px;
 }
