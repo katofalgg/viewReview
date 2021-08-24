@@ -1,6 +1,3 @@
-import React, { Component, useState } from 'react'
-
-
 import Footer from './components/Comman/Footer';
 import Main from './components/Main/Main';
 import Authors from './components/Authors/Authors';
@@ -16,12 +13,15 @@ import Home from './components/PrivateOffice/Home';
 import SignUp from './components/Login/SignUp';
 import { Provider } from 'react-redux';
 import { store } from './Redux/store';
+import SearchContextProvider from './components/Comman/SearchContext';
+
 const App = () => {
   
   return (
     <Provider store={store}>
     <AuthProvider>
     <BrowserRouter> 
+    <SearchContextProvider>
     <div className={classes.main}>
     <Header/>
     <div className={classes.empty_space_left}/>
@@ -44,10 +44,11 @@ const App = () => {
       angle="90deg">
     </Gradient> */}
   </div>
-  
-</BrowserRouter>
+  </SearchContextProvider>
+  </BrowserRouter>
     </AuthProvider>  
     </Provider>
+    
   )
 }
 

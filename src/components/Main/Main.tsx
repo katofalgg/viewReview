@@ -22,7 +22,6 @@ const Main: React.FC  = () => {
         angle="90deg"
         transitionType="sequential"
         > 
-        
         <div className={classes.gradient}>
         <Main_advice />
         <Main_novelty/>

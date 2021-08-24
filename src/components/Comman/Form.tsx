@@ -1,44 +1,32 @@
-import React, { useState } from "react";
-import { useEffect } from "react";
+import React, { Children, useState } from "react";
+import { createContext } from "react";
+import { useContext } from "react";
 import { sendRequest } from "../Request";
-import classes from './Comman.module.css'
+import classes from './Comman.module.css';
+import { SearchContext } from "./SearchContext";
+
+export const EntryContext = createContext('');
+
 const Form: React.FC = () => {
     const [searchEntry, setsearchEntry] = useState('');
-    const [page, setPage] = useState(1);
-    const [films, setFilms] = useState([]);
-
+    const searchButtonClick = useContext(SearchContext);
+    // console.log(searchButtonClick)
     const updateSearchInput = (e: React.ChangeEvent<HTMLInputElement>) => {
         setsearchEntry(e.target.value);
     }
     const keyPressHandler = (e: React.KeyboardEvent) => {
       if (e.key === 'Enter'){
-        console.log(searchEntry)
+        // console.log(searchEntry)
       }
     }
-    const searchButtonClick = (event: React.MouseEvent<HTMLButtonElement>) => {
-      const requestURL = `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${searchEntry}&page=${page}`
-        sendRequest('GET', requestURL)
-        .then(response => {
-          setPage(1);
-          setFilms([...films, ...response.films]);
-          
-          console.log(response)
-        })
-        .catch(error => {
-          console.log(
-            "error",
-            error
-          );
-      });
-    }
-
     return(
+      <EntryContext.Provider value={searchEntry}>
       <div className={classes.search}>
         <button 
         type="submit" 
         className={`${classes.search_button} ${searchEntry.trim() ? "active" : null}`}
         disabled={!searchEntry.trim()}
-        onClick={searchButtonClick}
+        onClick={() => searchButtonClick.searchButtonClick()}
         >
         <svg height="32" width="32">
           <path
@@ -57,8 +45,8 @@ const Form: React.FC = () => {
         value={searchEntry}
         onKeyPress={keyPressHandler}
         />
-        
     </div>
+    </EntryContext.Provider>
     )
 }
 export default Form;
