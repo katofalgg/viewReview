@@ -1,4 +1,5 @@
 import React, { useEffect, useState }  from "react";
+import Loader from "../Comman/Loader";
 import app from "./base";
 
 export const AuthContext = React.createContext();
@@ -15,7 +16,7 @@ export const AuthProvider = ({children}) => {
     }, []);
 
     if(pending){
-        return <>Loading...</>
+        return <Loader/>
     }
     return (
         <AuthContext.Provider

@@ -1,8 +1,10 @@
 
 import React from "react";
 import { useState, useEffect } from "react";
+import Loader from "../Comman/Loader";
 import {sendRequest} from '../Request';
 import s from './Genres.module.css';
+import GenresPict from "./GenresPictures";
 
 
 
@@ -39,7 +41,6 @@ useEffect(() => {
          })
     }
     fetch()
-    console.log('обновл жанр')
     setPage(1)
 }, [genreID])
 
@@ -51,8 +52,6 @@ useEffect(() => {
         })
    }
    fetch()
-   console.log(page)
-   console.log(requestURL)
 }, [page])
 
     return(
@@ -61,17 +60,9 @@ useEffect(() => {
                 <div>
                 <button className={s.button_g} onClick={() => setGenreID(genreList.id)}>{genreList.name}</button>
                 </div>    
-            ))}
-            <ul>
-            {films.map(element => (
-            <li> 
-                <figure className={s.sign}> 
-                    <img src={element.posterUrl}/>
-                    <figcaption>{element.nameRu}</figcaption>
-                </figure>
-            </li>
-            ))}
-            </ul>
+            ))} 
+            {loaded ? <GenresPict films={films}/> : <Loader/>}
+            
             <button onClick={() => setPage(page + 1)}>{"Показать ещё"}</button> 
         </div>
     )
