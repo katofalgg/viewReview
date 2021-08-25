@@ -4,7 +4,7 @@ import styles from "../../styles";
 import classes from './Comman.module.css'
 const Navbar: React.FC = () => {
     const links = [
-        {path: "/main", name: 'Все фильмы'},
+        {path: "/main", name: 'Главная'},
         {path: "/content_list", name: 'ТОП-250'},
         {path: "/genres", name: 'Жанры'},
         {path: "/authors", name: 'Рецензии'},

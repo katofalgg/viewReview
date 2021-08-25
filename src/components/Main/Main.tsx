@@ -4,6 +4,8 @@ import Main_novelty from "./Main_novelty";
 import React, { Component, useState } from 'react'
 import classes from './Main.module.css'
 import { Gradient } from 'react-gradient';
+import Search_result from "./Search_result";
+
 const Main: React.FC  = () => {
     const gradients1 = [
         ['#CB6F6F', '#587EB8'],
@@ -15,6 +17,7 @@ const Main: React.FC  = () => {
       ];
     return(
         <>
+        <Search_result/>
         <Gradient
         gradients={ gradients1 }
         property="background"

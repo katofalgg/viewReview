@@ -12,7 +12,6 @@ const Main_advice: React.FC  = () => {
         sendRequest('GET', requestURL)
         .then(response => {
             setFilms([...films, ...response.films]);
-            console.log(films, page)
             setLoaded(true);
         })
         .catch(error => {

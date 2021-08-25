@@ -1,6 +1,6 @@
 import Footer from './components/Comman/Footer';
 import Main from './components/Main/Main';
-import Authors from './components/Authors/Authors';
+import Authors from './components/Review/Review';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Genres from './components/Genres/Genres';
 import Header from './components/Comman/Header';

@@ -1,8 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import classes from './Content_list.module.css'
 import {sendRequest} from '../Request'
+import Loader from '../Comman/Loader'
 
-import Content_list from './Content_list';
 interface IContentProps {
     category: string,
     optionalArgument?: string;
@@ -32,7 +32,7 @@ const Content: React.FC<IContentProps & React.HTMLAttributes<HTMLDivElement>> = 
 }, [page])
 
     return(
-        <div className={classes.container}>
+            <div className={classes.container}>
             <ul>
             {films.map(element => (
             <li> 
@@ -44,7 +44,6 @@ const Content: React.FC<IContentProps & React.HTMLAttributes<HTMLDivElement>> = 
             ))}
             </ul>
         </div>
-
     )
 };
 export default Content;
