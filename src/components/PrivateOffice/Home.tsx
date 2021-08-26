@@ -4,6 +4,7 @@ import { NotesState } from "../../Redux/notesReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { NewNoteInput } from "./NewNoteInput";
 import { addNote } from '../../Redux/actions';
+import UsersInformation from "./UsersInformation";
 
 
 const Home:React.FC = () => {
@@ -21,12 +22,12 @@ const Home:React.FC = () => {
     <>
       <h1>Личный кабинет</h1>
       <NewNoteInput addNote={onAddNote}/>
-      <hr/>
       <ul>
         {notes.map((note) => {
           return <li key={note}>{note}</li>;
         })}
       </ul>
+      <UsersInformation/>
       <button onClick={() => app.auth().signOut()}>Выйти</button>
     </>
   );
