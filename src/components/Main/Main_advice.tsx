@@ -1,18 +1,19 @@
 import React, { useState, useEffect } from 'react';
 import {sendRequest} from '../Request';
 import classes from './Main.module.css';
+import Modal from '../Modal/Modal';
 
 const Main_advice: React.FC  = () => {
     const [films, setFilms] = useState([]);
-    const [loaded, setLoaded] = useState(false);
     const [page, setPage] = useState(1);
+    const [modalActive, setModalActive] = useState(false);
+    const [modalFilm, setModalFilm] = useState({nameRu: '', year: '', filmLength: '', rating:'', genres: [{ genre: ''}]})
     const requestURL = `https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=${page}`
 
     useEffect(() => {
         sendRequest('GET', requestURL)
         .then(response => {
             setFilms([...films, ...response.films]);
-            setLoaded(true);
         })
         .catch(error => {
             console.log(
@@ -21,7 +22,11 @@ const Main_advice: React.FC  = () => {
             );
         }); 
 
-}, [page])
+    }, [page])
+    const openModal = (element) => {
+        setModalFilm(element)
+        setModalActive(true);
+    }
 
     return(
         <>
@@ -30,7 +35,14 @@ const Main_advice: React.FC  = () => {
         <ul>
             {films.map(element => (
             <li> 
-                <figure> 
+                <Modal active={modalActive} setActive={setModalActive} >
+                    <h2>{modalFilm.nameRu}</h2>
+                    <h3>Год выпуска: {modalFilm.year}</h3>
+                    <h3>Длина фильма: {modalFilm.filmLength}</h3>
+                    <h3>Жанр: {modalFilm.genres.map((el, index, array) => index === array.length - 1 ? el.genre : `${el.genre}, `)}</h3>
+                    <h3>Рейтинг: {modalFilm.rating}</h3>
+                </Modal>
+                <figure onClick={() => openModal(element)}> 
                     <img src={element.posterUrl}/>
                     <figcaption>{element.nameRu}</figcaption>
                 </figure>

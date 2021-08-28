@@ -1,12 +1,15 @@
 import Main_advice from "./Main_advice";
-import Button from "../Comman/Button";
 import Main_novelty from "./Main_novelty";
 import React, { Component, useState } from 'react'
 import classes from './Main.module.css'
 import { Gradient } from 'react-gradient';
 import Search_result from "./Search_result";
+import Loader from "../Comman/Loader";
+import { useContext } from "react";
+import { SearchContext } from "../Comman/SearchContext";
 
-const Main: React.FC  = () => {
+const Main: React.FC = () => {
+    const {loaded} = useContext(SearchContext);
     const gradients1 = [
         ['#CB6F6F', '#587EB8'],
         ['#D48A7B', '#826FB2'],
@@ -17,7 +20,8 @@ const Main: React.FC  = () => {
       ];
     return(
         <>
-        <Search_result/>
+        {loaded ? <Search_result/>  : <Loader/>}
+        
         <Gradient
         gradients={ gradients1 }
         property="background"

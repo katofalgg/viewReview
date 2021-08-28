@@ -34,6 +34,7 @@ const Genres: React.FC = () => {
         });
 
 useEffect(() => { 
+    setLoaded(false);
     const fetch = async() => {
          filmsFetch().then(films => {
             setFilms(films);
@@ -45,6 +46,7 @@ useEffect(() => {
 }, [genreID])
 
 useEffect(() => {
+    setLoaded(false);
     const fetch = async() => {
         filmsFetch().then(arr => {
            setFilms([...films, ...arr])

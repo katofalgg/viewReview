@@ -23,10 +23,11 @@ export const NewNoteInput: React.FC<NewNoteInputProps> = ({addNote}) => {
   }
     return(
         <>
+        <h2>Список фильмов для просмотра</h2>
         <input 
         type='text'
         name='note'
-        placeholder='Запись'
+        placeholder='Фильм'
         onChange={updateNote}
         value={note}
         onKeyPress={keyPressHandler}

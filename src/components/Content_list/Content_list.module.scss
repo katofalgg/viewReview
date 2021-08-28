@@ -26,11 +26,7 @@ img{
     width: 180px;
     height: 250px; 
 }
-
-li:hover {
-    transform: scale(1.03, 1.03);
-    transition: transform 1.05s;
-}  
+  
 ul{
     display: flex;
     justify-content: space-around;

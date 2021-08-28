@@ -2,7 +2,11 @@ import React, { useCallback } from "react";
 import { withRouter } from "react-router";
 import app from "./base";
 
-const SignUp = ({ history }) => {
+interface ISignUpProp {
+  history: any,
+}
+
+const SignUp: React.FC<ISignUpProp> = ({ history }) => {
   const handleSignUp = useCallback(async event => {
     event.preventDefault();
     const { email, password } = event.target.elements;

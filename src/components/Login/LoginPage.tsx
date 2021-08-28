@@ -3,7 +3,11 @@ import { withRouter, Redirect } from "react-router";
 import app from "./base.js";
 import { AuthContext } from "./Auth.js";
 
-const LoginPage= ({history}) => {
+interface ISignINProp {
+  history: any,
+}
+
+const LoginPage: React.FC<ISignINProp>= ({history}) => {
     const handleLogin = useCallback(
         async event => {
             event.preventDefault();

@@ -36,15 +36,6 @@ img {
   height: 250px;
 }
 
-li:hover {
-  -webkit-transform: scale(1.03, 1.03);
-          transform: scale(1.03, 1.03);
-  -webkit-transition: -webkit-transform 1.05s;
-  transition: -webkit-transform 1.05s;
-  transition: transform 1.05s;
-  transition: transform 1.05s, -webkit-transform 1.05s;
-}
-
 ul {
   display: -webkit-box;
   display: -ms-flexbox;

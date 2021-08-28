@@ -1,6 +1,5 @@
 import Footer from './components/Comman/Footer';
 import Main from './components/Main/Main';
-import Authors from './components/Review/Review';
 import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Genres from './components/Genres/Genres';
 import Header from './components/Comman/Header';
@@ -14,6 +13,7 @@ import SignUp from './components/Login/SignUp';
 import { Provider } from 'react-redux';
 import { store } from './Redux/store';
 import SearchContextProvider from './components/Comman/SearchContext';
+import Review from './components/Review/NewReview';
 
 const App = () => {
   
@@ -23,32 +23,29 @@ const App = () => {
     <BrowserRouter> 
     <SearchContextProvider>
     <div className={classes.main}>
-    <Header/>
-    <div className={classes.empty_space_left}/>
-    <div className={classes.container}>
-      <Route path="/main" component={Main}/>
+      <Header/>
+      <div className={classes.empty_space_left}/>
+      <div className={classes.container}>
+      <Route
+          exact
+          path="/"
+          render={() => <Redirect to="/main" />}
+      />
+      <Route exact path="/main" component={Main}/>
       <Route path="/content_list" component={Content_list}/>
       <Route path="/genres" component={Genres}/>
-      <Route path="/authors" component={Authors}/>
+      <Route path="/review" component={Review}/>
       <Route path="/login" component={LoginPage}/>
       <PrivateRoute exact path="/" component={Home} />
       <Route exact path="/signup" component={SignUp} />
+      </div>
+      <div className={classes.empty_space_right}></div>
+      <Footer/>
     </div>
-    <div className={classes.empty_space_right}></div>
-    <Footer/> 
-    {/* <Gradient
-      className={classes.empty_space_right}
-      gradients={ gradients2 }
-      property="background"
-      duration={ 10000 }
-      angle="90deg">
-    </Gradient> */}
-  </div>
   </SearchContextProvider>
   </BrowserRouter>
     </AuthProvider>  
     </Provider>
-    
   )
 }
 
