@@ -1,28 +1,73 @@
-.gradient {
-    width: 50%;
-    height: 450px;
-}  
+.sign {
+  padding: 15px;
+  margin: 10px 0 5px 5px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 8vw;
+  height: 40vh;
+  min-width: 210px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  border-radius: 20px;
+  background: #ffffff;
+  border: 0;
+}
+.sign figcaption {
+  text-align: center;
+  margin-top: 10px;
+  color: #ffffff;
+}
+.sign img {
+  width: 180px;
+  height: 250px;
+}
+.sign p {
+  color: #ffffff;
+}
+
+.scrollmenu {
+  height: 100%;
+  padding-bottom: 1%;
+}
 .scrollmenu ul {
-    overflow: scroll;
-    flex-wrap: nowrap;
-    display: flex;
-    justify-content: flex-start;
-    flex-direction: row;
-    width: 1200px;
-    height: 300px;
-    overflow-y: hidden;
-} 
+  overflow: scroll;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 1200px;
+  height: 400px;
+  overflow-y: hidden;
+}
 .scrollmenu h1 {
-    padding-top: 5px;
-    
+  padding-top: 5px;
+  color: #ffffff;
 }
 .scrollmenu li {
-    padding-top: 35px;
-    padding-left: 20px;
-    padding-bottom: 0px;
+  padding-top: 35px;
+  padding-left: 20px;
 }
 
-
-
-
-
+.gradient {
+  padding-top: 50px;
+  height: 500px;
+}

@@ -42,7 +42,7 @@ const Main_advice: React.FC  = () => {
                     <h3>Жанр: {modalFilm.genres.map((el, index, array) => index === array.length - 1 ? el.genre : `${el.genre}, `)}</h3>
                     <h3>Рейтинг: {modalFilm.rating}</h3>
                 </Modal>
-                <figure onClick={() => openModal(element)}> 
+                <figure className={classes.sign} onClick={() => openModal(element)}> 
                     <img src={element.posterUrl}/>
                     <figcaption>{element.nameRu}</figcaption>
                 </figure>

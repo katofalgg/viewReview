@@ -8,6 +8,7 @@ const SearchContextProvider = props => {
     const [films, setFilms] = useState([]);
     const [searchEntry, setsearchEntry] = useState('');
     const [loaded, setLoaded] = useState(true);
+    const [activeSearch, setActiveSearch] = useState(false);
 
     const updateSearchInput = (e) => {
       setsearchEntry(e.target.value);
@@ -18,6 +19,7 @@ const SearchContextProvider = props => {
     }
   }
     const searchButtonClick = (event) => {
+      setActiveSearch(true);
       setLoaded(false);
         const requestURL = `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-keyword?keyword=${searchEntry}&page=${page}` 
         sendRequest('GET', requestURL)
@@ -35,7 +37,7 @@ const SearchContextProvider = props => {
         });
     }
     return(
-        <SearchContext.Provider value={{page, films, searchEntry, searchButtonClick, updateSearchInput, keyPressHandler, loaded}}>
+        <SearchContext.Provider value={{page, films, searchEntry, searchButtonClick, updateSearchInput, keyPressHandler, loaded, activeSearch}}>
           {props.children}
         </SearchContext.Provider>
 

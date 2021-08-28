@@ -26,18 +26,18 @@ const App = () => {
       <Header/>
       <div className={classes.empty_space_left}/>
       <div className={classes.container}>
-      <Route
+        <Route
           exact
           path="/"
           render={() => <Redirect to="/main" />}
-      />
-      <Route exact path="/main" component={Main}/>
-      <Route path="/content_list" component={Content_list}/>
-      <Route path="/genres" component={Genres}/>
-      <Route path="/review" component={Review}/>
-      <Route path="/login" component={LoginPage}/>
-      <PrivateRoute exact path="/" component={Home} />
-      <Route exact path="/signup" component={SignUp} />
+        />
+        <Route exact path="/main" component={Main}/>
+        <Route path="/content_list" component={Content_list}/>
+        <Route path="/genres" component={Genres}/>
+        <Route path="/review" component={Review}/>
+        <Route path="/login" component={LoginPage}/>
+        <PrivateRoute exact path="/" component={Home} />
+        <Route exact path="/signup" component={SignUp} />
       </div>
       <div className={classes.empty_space_right}></div>
       <Footer/>

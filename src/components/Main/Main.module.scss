@@ -1,0 +1,60 @@
+
+@import '../_variables.scss';
+.sign{ 
+    padding: 15px; 
+    margin: 10px 0 5px 5px;  
+    justify-content: center;
+    width: 8vw;
+    height: 40vh;
+    min-width: 210px;
+    display: flex;
+    align-items: center;
+    align-content: center;
+    flex-direction: column;
+    border-radius: 20px;
+    background: $colorLight;
+    border: 0;
+    
+    figcaption {
+        text-align: center;
+        margin-top: 10px;
+        color: $colorLight;
+    } 
+    img{
+        width: 180px;
+        height: 250px; 
+    }
+    p {
+        color:$colorLight;
+    }   
+}
+.scrollmenu{
+    height: 100%;
+    padding-bottom: 1%;
+    ul {
+    overflow: scroll;
+    flex-wrap: nowrap;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: column;
+    width: 1200px;
+    height: 400px;
+    overflow-y: hidden;
+    }
+    h1 {
+        padding-top: 5px;
+        color: $colorLight;
+    }
+    li {
+        padding-top: 35px;
+        padding-left: 20px;   
+    }
+}
+
+.gradient {
+    padding-top: 50px;
+    height: 500px;
+    
+}
+
+

@@ -1,11 +1,10 @@
-$colorB:#f39b6f;
+@import '../_variables.scss';
 
 * {
   padding: 0;
   margin: 0;
-  font-family: "Lobster", "Josefin Sans", Helvetica;
+  font-family: "Andale Mono", "monospace";
 }
-
 .main {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
@@ -13,151 +12,167 @@ $colorB:#f39b6f;
   width: 100vw;
   min-height: 100vh;
   min-width: 583px;
-}
+  .header {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    grid-row: 1;
+    display: flex;
+    justify-content: center;
+    background-color: $colorBackground;  
+    width: 100%;
+    height: 100%; 
+    padding-top: 1%;
+    padding-bottom: 1%;  
+    .search {
+      display: flex;
+      padding: 10px;
+      width: 150px;
+      height: 50px;
+      .search_field{
+        width: 100px;
+        border: 0;
+      }
 
-.header {
-  grid-column-start: 2;
-  grid-column-end: 3;
-  grid-row: 1;
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content:space-evenly;
-  float: left;
-  background-color: #355C7D;
-  padding-top: 1%;
-  padding-bottom: 1%;
-  width: 100%;
-  height: 100%;
-}
-.header a {
-  color:blanchedalmond;
-  padding-top: 18px
-}
+      .search_link {
+        background-color: $colorButton;
+        svg {
+          padding-top: 6px;
+        }
+      }
+    }
 
-$font-size: 50px;
-$padding: 30px;
-
-.title {
-  color: $colorB;
-  text-align: center;
-  @media screen and (min-width: 1200px) {
-    font-size: $font-size;
-    padding-right: $padding;
-    padding-left: $padding;
-    
+    .title {
+      color: $colorLight;
+      padding-top: 7px;
+      text-align: center;
+      @media screen and (min-width: 1200px) {
+        font-size: $font-size;
+        padding-right: $padding;
+        padding-left: $padding;  
+      }
+      @media screen and (min-width: 992px) and (max-width: 1132px) {
+        font-size: $font-size - 5px;
+        padding-right: $padding - 2px;
+        padding-left: $padding - 2px;
+      }
+      @media screen and (min-width: 768px) and (max-width: 991px) {
+        font-size: $font-size - 10px;
+        padding-right: $padding - 4px;
+        padding-left: $padding - 4px;
+      }
+      @media screen and (max-width: 992px) {
+        font-size: 0;
+      }
+    }
+    .navbar {
+      display: flex;
+      justify-content: baseline;
+      justify-content: space-between;
+      padding-top: 18px;
+      .navlink {
+        color: $colorLight;
+        font-size: $a-size;
+        font-family: 'Georgia', 'serif';
+        display: inline-block;
+        
+        text-decoration: none;
+        padding: 10px;
+        overflow: hidden;
+        @media screen and (max-width: 767px) {
+          font-size: $a-size - 8px;
+        }
+        @media screen and (max-width: 480px) {
+          font-size: $a-size - 15px;
+        }
+      }
+    }
   }
-  @media screen and (min-width: 992px) and (max-width: 1132px) {
-    font-size: $font-size - 5px;
-    padding-right: $padding - 2px;
-    padding-left: $padding - 2px;
+
+  .container {
+    background-color: $colorLight;
+    grid-column: 2 / 3;
+    grid-row: 2 / 4;
+    padding-bottom: 0;
+    height: 100%;
+    width: 100%;
+    float: left;
+    justify-content: center;
+    flex: 1;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    .button {
+      background-color: $colorButton;
+      color: $colorLight; 
+      border-width: 1px;
+      font-size: 12px;
+      display: flex;
+      float:left; 
+      width: 80px;
+      height: 50px;
+      margin: 10px;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px; 
+    }
+    ul{
+      display: flex;
+      justify-content: space-around;
+      justify-items: end;
+      list-style-type: none;
+      flex-wrap: wrap;
+      padding-bottom: 100px;
+      flex: 1;
+      
+    }
   }
-  @media screen and (min-width: 768px) and (max-width: 991px) {
-    font-size: $font-size - 10px;
-    padding-right: $padding - 4px;
-    padding-left: $padding - 4px;
+
+  .empty_space_left {
+    grid-column: 1;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color:$colorBackground;
   }
-  @media screen and (max-width: 882px) {
-    font-size: 0;
+
+  .empty_space_right {
+    grid-column: 3;
+    grid-row-start: 1;
+    grid-row-end: 4;
+    background-color:$colorBackground;
   }
-}
 
-.container {
-  background-color: #f39b6f;
-  grid-column: 2 / 3;
-  grid-row: 2 / 4;
-  padding-bottom: 0;
-  height: 100%;
-  float: left;
-  justify-content: center;
-  flex: 1;
-  border-top-left-radius: 20px;
-  border-top-right-radius: 20px;
-}
+  
+  .footer {
+    grid-column: 1/4;
+    grid-row: 4;
+    background-color:$colorBackground;
+    justify-content: center;
+    padding: 10px;
+    flex: 1; 
 
-.empty_space_left {
-  grid-column: 1;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  padding: 0;
-  margin: 0;
-  background-color:#355C7D ;
-}
-
-.empty_space_right {
-  grid-column: 3;
-  grid-row-start: 1;
-  grid-row-end: 4;
-  background-color:#355C7D ;
-}
-
-.footer {
-  grid-column: 1/4;
-  grid-row: 4;
-  background-color:#355C7D;
-  display: flex;
-  justify-content: center;
-  padding: 10px;
-  flex: 1;
+    p {
+      color: $colorLight; 
+      font-size: 10px;
+      justify-content: center;
+      display: flex;
+    } 
+  }
   
 }
 
-.footer p {
-   color: #f39b6f; 
-   font-size: 10px;
-}
 
-.navbar {
-  display: flex;
-  justify-content: baseline;
-  justify-content: space-between;
-}
-$a-size: 20px;
-a {
-  text-decoration: none;
-  display: inline-block;
-  font-size: $a-size;
-  padding: 10px;
-  overflow: hidden;
-  @media screen and (max-width: 767px) {
-    font-size: $a-size - 8px;
-  }
-  @media screen and (max-width: 480px) {
-    font-size: $a-size - 15px;
-  }
-}
 
-.log{
-  float: left;
-  color: $colorB;
-  width: 100px;
-  height: 45px;
-  display: flex;
-  margin-left: 2px;
-  margin-right: 2px;
-  align-items: center;
-  justify-content: center;
-  padding-top: 10px;
-  
-}
 
-.search {
-  display: flex;
-  justify-content:space-between;
-  justify-items: center;
-  padding: 10px;
-  
-}
 
-.search_field{
-  width: 100px;
-  height: 45px;
-  border: 1;
-}
 
-.search_button {
-  background-color: #ec5555;
-  flex: 1;
-  height: 49px;
-  border-right: 0;
-}
+
+
+
+
+
+
+
+
+
+
+
 

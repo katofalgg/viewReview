@@ -1,20 +1,22 @@
 import React from "react";
 import { useContext, useState } from "react";
 import { SearchContext } from "../Comman/SearchContext";
-import classes from './Main.module.css';
+import s from './Main.module.css';
 import Modal from "../Modal/Modal";
+
 
 const Search_result: React.FC  = () => {
     const [modalActive, setModalActive] = useState(false);
     const [modalFilm, setModalFilm] = useState({nameRu: '', year: '', filmLength: '', rating:'', genres: [{ genre: ''}], description: ''})
-    const {page, films} = useContext(SearchContext);
+    const {page, films, loaded} = useContext(SearchContext);
     const openModal = (element) => {
         setModalFilm(element)
         setModalActive(true);
     }
     return(
-        <>
-        <div className={classes.sign}>
+        <> 
+        <div className={s.search_container}>
+        <div>
             <ul>
             {films.map(element => (
             <li> 
@@ -26,7 +28,7 @@ const Search_result: React.FC  = () => {
                      <h3>Рейтинг: {modalFilm.rating}</h3>
                      <h3>Описание: {modalFilm.description}</h3>
                 </Modal>
-                <figure onClick={() => openModal(element)}> 
+                <figure className={s.sign} onClick={() => openModal(element)}> 
                     <img src={element.posterUrl}/>
                     <figcaption>{element.nameRu}</figcaption>
                 </figure>
@@ -34,6 +36,8 @@ const Search_result: React.FC  = () => {
             ))}
             </ul>
         </div>
+        </div>
+        
         </>
     )
 }

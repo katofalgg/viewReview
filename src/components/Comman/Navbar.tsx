@@ -16,7 +16,7 @@ const Navbar: React.FC = () => {
         <div className={classes.navbar}>
             {links.map(link => (
                 <div>
-                    <NavLink to={link.path} style={styles.navlink}>{link.name}</NavLink>
+                    <NavLink to={link.path} className={classes.navlink}>{link.name}</NavLink>
                 </div>
             ))}
         </div>

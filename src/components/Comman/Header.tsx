@@ -10,8 +10,6 @@ const Header: React.FC = () => {
             <Navbar/>
             <h1 className={classes.title}>ViewReview</h1>
             <Form/>
-            <div className={classes.log}>
-            </div>
         </div>
     )
 }
