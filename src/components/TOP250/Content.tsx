@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import classes from './Content_list.module.css';
+import classes from './TOP250.module.css';
 import {sendRequest} from '../Request';
 import Modal from '../Modal/Modal';
 
@@ -29,7 +29,7 @@ const Content: React.FC<IContentProps & React.HTMLAttributes<HTMLDivElement>> = 
             );
         }); 
 
-}, [page])
+    }, [page])
 const openModal = (element) => {
     setModalFilm(element)
     setModalActive(true);

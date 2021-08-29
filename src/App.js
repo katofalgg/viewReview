@@ -4,7 +4,7 @@ import { BrowserRouter, Route, Redirect } from 'react-router-dom';
 import Genres from './components/Genres/Genres';
 import Header from './components/Comman/Header';
 import classes from './components/Comman/Comman.module.css'
-import Content_list from './components/Content_list/Content_list';
+import Content_list from './components/TOP250/TOP250';
 import LoginPage from './components/Login/LoginPage';
 import { AuthProvider } from './components/Login/Auth';
 import PrivateRoute from './components/Login/PrivatRoute'
@@ -36,7 +36,7 @@ const App = () => {
         <Route path="/genres" component={Genres}/>
         <Route path="/review" component={Review}/>
         <Route path="/login" component={LoginPage}/>
-        <PrivateRoute exact path="/" component={Home} />
+        <PrivateRoute exact path="/account" component={Home} />
         <Route exact path="/signup" component={SignUp} />
       </div>
       <div className={classes.empty_space_right}></div>

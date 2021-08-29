@@ -2,7 +2,7 @@ import classes from '../Comman/Comman.module.css'
 import Content from './Content'
 import React, { useState } from 'react'
 import Button from '../Comman/Button'
-import s from './Content_list.module.css'
+import s from './TOP250.module.css'
 
 const Content_list: React.FC = () => {
     const [page, setPage] = useState(1);

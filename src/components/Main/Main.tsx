@@ -19,8 +19,18 @@ const Main: React.FC = () => {
     ];
     console.log(activeSearch);
   return(
-      <>
-      {activeSearch ? <Search_result/>  : null}
+      <div className={classes.main}>
+      <div className={classes.gradient}>
+      <Gradient
+      gradients={ gradients1 }
+      property="background"
+      duration={ 10000 }
+      angle="90deg"
+      transitionType="sequential"
+      >
+        {activeSearch ? <Search_result/>  : null}
+      </Gradient>
+      </div>
       <div className={classes.gradient}>
       <Gradient
       gradients={ gradients1 }
@@ -43,7 +53,7 @@ const Main: React.FC = () => {
       <Main_novelty/>
       </Gradient> 
       </div>  
-    </>
+    </div>
   )
 }
 export default Main;

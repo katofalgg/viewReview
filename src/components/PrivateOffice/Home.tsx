@@ -5,7 +5,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { NewNoteInput } from "./NewNoteInput";
 import { addNote } from '../../Redux/actions';
 import UsersInformation from "./UsersInformation";
-
+import classes from './Account.module.css'
 
 const Home:React.FC = () => {
   
@@ -19,8 +19,7 @@ const Home:React.FC = () => {
   };
 
   return (
-    <>
-      <h1>Личный кабинет</h1>
+    <div className={classes.field_acc}>
       <NewNoteInput addNote={onAddNote}/>
       <ul>
         {notes.map((note) => {
@@ -29,7 +28,7 @@ const Home:React.FC = () => {
       </ul>
       <UsersInformation/>
       <button onClick={() => app.auth().signOut()}>Выйти</button>
-    </>
+    </div>
   );
 };
 

@@ -8,7 +8,7 @@ import Modal from "../Modal/Modal";
 const Search_result: React.FC  = () => {
     const [modalActive, setModalActive] = useState(false);
     const [modalFilm, setModalFilm] = useState({nameRu: '', year: '', filmLength: '', rating:'', genres: [{ genre: ''}], description: ''})
-    const {page, films, loaded} = useContext(SearchContext);
+    const {films, loaded, searchEntry} = useContext(SearchContext);
     const openModal = (element) => {
         setModalFilm(element)
         setModalActive(true);
@@ -16,6 +16,7 @@ const Search_result: React.FC  = () => {
     return(
         <> 
         <div className={s.search_container}>
+        <h1>Результат поиса по запросу {searchEntry}</h1>
         <div>
             <ul>
             {films.map(element => (

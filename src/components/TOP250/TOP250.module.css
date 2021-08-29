@@ -1,14 +1,26 @@
-.sign {
-  border: 1px solid;
+.order {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-top: 3%;
+}
+.order .sign {
   padding: 15px;
   margin: 10px 0 5px 5px;
   background: #e47676;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 8vw;
-  height: 40vh;
-  min-width: 210px;
+  width: 10vw;
+  height: 32vh;
+  min-width: 150px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,15 +35,22 @@
           flex-direction: column;
   border-radius: 20px;
 }
-.sign figcaption {
+.order .sign figcaption {
   text-align: center;
   margin-top: 10px;
   color: #ffffff;
 }
-.sign img {
+.order .sign img {
   width: 180px;
   height: 250px;
 }
-.sign p {
+.order .sign p {
   color: #ffffff;
+}
+
+.order_button {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
