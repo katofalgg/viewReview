@@ -1,13 +1,14 @@
 @import '../_variables.scss';
 
-@import '../Content_list/Content_list.module.scss';
+@import '../TOP250/TOP250.module.scss';
 
-@include sign();
+
 
 .order{
     display: flex;
     flex-direction: column;
     align-items: center;
+    @include sign();
 }
 .oorder_button {
     flex-direction: row;

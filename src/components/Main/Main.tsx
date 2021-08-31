@@ -10,14 +10,9 @@ import { SearchContext } from "../Comman/SearchContext";
 const Main: React.FC = () => {
   const {activeSearch} = useContext(SearchContext);
   const gradients1 = [
-      ['#CB6F6F', '#587EB8'],
-      ['#D48A7B', '#826FB2'],
+      ['#F39BA7 ', '#8D9FEC'],
+      ['#95D0F7', '#FBC1C9'],
     ];
-    const gradients2 = [
-      ['#355C7D', '#f39b6f'],
-      ['#355C7D', '#f39b6f'],
-    ];
-    console.log(activeSearch);
   return(
       <div className={classes.main}>
       <div className={classes.gradient}>

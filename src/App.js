@@ -14,14 +14,18 @@ import { Provider } from 'react-redux';
 import { store } from './Redux/store';
 import SearchContextProvider from './components/Comman/SearchContext';
 import Review from './components/Review/NewReview';
+import { useContext } from 'react';
+import ThemeContextProvider, { ThemeContext } from './components/Comman/ThemeContext';
+
 
 const App = () => {
-  
+  const theme = useContext(ThemeContext);
   return (
     <Provider store={store}>
-    <AuthProvider>
-    <BrowserRouter> 
-    <SearchContextProvider>
+      <AuthProvider>
+      <BrowserRouter> 
+      <SearchContextProvider>
+      <ThemeContextProvider>
     <div className={classes.main}>
       <Header/>
       <div className={classes.empty_space_left}/>
@@ -39,12 +43,14 @@ const App = () => {
         <PrivateRoute exact path="/account" component={Home} />
         <Route exact path="/signup" component={SignUp} />
       </div>
-      <div className={classes.empty_space_right}></div>
+      <div className={classes.empty_space_right}>
+      </div>
       <Footer/>
     </div>
-  </SearchContextProvider>
-  </BrowserRouter>
-    </AuthProvider>  
+    </ThemeContextProvider>
+      </SearchContextProvider>
+      </BrowserRouter>
+      </AuthProvider>  
     </Provider>
   )
 }

@@ -20,14 +20,19 @@ const Home:React.FC = () => {
 
   return (
     <div className={classes.field_acc}>
-      <NewNoteInput addNote={onAddNote}/>
-      <ul>
+      <div className={classes.inputFilms}>
+      <NewNoteInput  addNote={onAddNote}/>
+      
+      <ol>
         {notes.map((note) => {
           return <li key={note}>{note}</li>;
         })}
-      </ul>
+      </ol>
+      </div>
+      <div className={classes.info}>
       <UsersInformation/>
       <button onClick={() => app.auth().signOut()}>Выйти</button>
+      </div>
     </div>
   );
 };

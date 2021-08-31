@@ -1,6 +1,5 @@
 import React from "react";
 import { Link, NavLink } from "react-router-dom";
-import styles from "../../styles";
 import classes from './Comman.module.css'
 const Navbar: React.FC = () => {
     const links = [
@@ -8,7 +7,7 @@ const Navbar: React.FC = () => {
         {path: "/content_list", name: 'ТОП-250'},
         {path: "/genres", name: 'Жанры'},
         {path: "/review", name: 'Рецензии'},
-        {path: "/login", name: 'Личный кабинет'},
+        {path: "/login", name: `Аккаунт`},
         {path: "/signup", name: 'Регистрация'},
     ]
 

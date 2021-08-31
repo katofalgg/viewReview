@@ -39,7 +39,7 @@ const openModal = (element) => {
             <div className={classes.container}>
             <ul>
             {films.map(element => (
-            <li>     
+            <li className={classes.sign}>     
                 <Modal active={modalActive} setActive={setModalActive} >
                     <h2>{modalFilm.nameRu}</h2>
                     <h3>Год выпуска: {modalFilm.year}</h3>
@@ -47,7 +47,7 @@ const openModal = (element) => {
                     <h3>Жанр: {modalFilm.genres.map((el, index, array) => index === array.length - 1 ? el.genre : `${el.genre}, `)}</h3>
                     <h3>Рейтинг: {modalFilm.rating}</h3>
                 </Modal>
-                <figure className={classes.sign} onClick={() => openModal(element)}> 
+                <figure onClick={() => openModal(element)}> 
                     <img src={element.posterUrl} />
                     <figcaption>{element.nameRu}</figcaption>
                 </figure>
