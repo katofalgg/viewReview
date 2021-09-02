@@ -3,6 +3,7 @@ import { useContext, useState } from "react";
 import { SearchContext } from "../Comman/SearchContext";
 import s from './Main.module.css';
 import Modal from "../Modal/Modal";
+import Loader from "../Comman/Loader";
 
 
 const Search_result: React.FC  = () => {
@@ -18,7 +19,7 @@ const Search_result: React.FC  = () => {
         <div className={s.search_container}>
         <h1>Результат поиса по запросу {searchEntry}</h1>
         <div>
-            <ul>
+            {loaded ? <ul>
             {films.map(element => (
             <li> 
                 <Modal active={modalActive} setActive={setModalActive} >
@@ -35,7 +36,8 @@ const Search_result: React.FC  = () => {
                 </figure>
             </li>
             ))}
-            </ul>
+            </ul> : <Loader/>}
+            
         </div>
         </div>
         

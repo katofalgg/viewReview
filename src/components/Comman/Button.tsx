@@ -1,5 +1,5 @@
 import React from "react";
-import classes from './Comman.module.css'
+
 
 interface IButtonProps {
     style: string,

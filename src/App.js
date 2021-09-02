@@ -13,20 +13,17 @@ import SignUp from './components/Login/SignUp';
 import { Provider } from 'react-redux';
 import { store } from './Redux/store';
 import SearchContextProvider from './components/Comman/SearchContext';
-import Review from './components/Review/NewReview';
-import { useContext } from 'react';
-import ThemeContextProvider, { ThemeContext } from './components/Comman/ThemeContext';
+import Review from './components/Review/Review';
 
 
 const App = () => {
-  const theme = useContext(ThemeContext);
+  
   return (
     <Provider store={store}>
       <AuthProvider>
       <BrowserRouter> 
       <SearchContextProvider>
-      <ThemeContextProvider>
-    <div className={classes.main}>
+      <div className={classes.main}>
       <Header/>
       <div className={classes.empty_space_left}/>
       <div className={classes.container}>
@@ -46,8 +43,7 @@ const App = () => {
       <div className={classes.empty_space_right}>
       </div>
       <Footer/>
-    </div>
-    </ThemeContextProvider>
+      </div>
       </SearchContextProvider>
       </BrowserRouter>
       </AuthProvider>  

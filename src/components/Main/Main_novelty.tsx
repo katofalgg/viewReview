@@ -5,7 +5,6 @@ import Modal from '../Modal/Modal';
 
 const Main_novelty: React.FC  = () => {
     const [films, setFilms] = useState([]);
-    const [loaded, setLoaded] = useState(false);
     const [page, setPage] = useState(1);
     const [modalActive, setModalActive] = useState(false);
     const [modalFilm, setModalFilm] = useState({nameRu: '', year: '', filmLength: '', rating:'', genres: [{ genre: ''}]});
@@ -16,7 +15,6 @@ const Main_novelty: React.FC  = () => {
         sendRequest('GET', requestURL)
         .then(response => {
             setFilms([...films, ...response.films]);
-            setLoaded(true);
         })
         .catch(error => {
             console.log(

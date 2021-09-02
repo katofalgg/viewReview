@@ -1,8 +1,6 @@
-import React, { Children, useState } from "react";
-import { createContext } from "react";
+import React from "react";
 import { useContext } from "react";
 import { Link } from "react-router-dom";
-import { sendRequest } from "../Request";
 import classes from './Comman.module.css';
 import { SearchContext } from "./SearchContext";
 

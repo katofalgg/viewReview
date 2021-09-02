@@ -1,5 +1,6 @@
 import React from "react";
 import "./Modal.css";
+
 interface IModalProps {
     active: boolean,
     setActive: any,

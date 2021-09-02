@@ -1,6 +1,7 @@
 import React, {useState} from "react";
 import s from './Genres.module.css';
-import Modal from '../Modal/Modal'
+import Modal from '../Modal/Modal';
+
 interface IGenrProps {
    films: Record<string, any>[] 
 }

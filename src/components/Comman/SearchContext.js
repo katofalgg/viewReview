@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useState } from "react";
 import { sendRequest } from "../Request";
-import { Redirect } from "react-router";
+
 export const SearchContext = createContext();
 
 const SearchContextProvider = props => {

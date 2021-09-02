@@ -1,12 +1,12 @@
-import { Action } from "./actions";
+import { ActionNote } from "./actions";
 
 export interface NotesState {
     notes: string[]
 }
-const initialState = {
+const defaultrootState = {
     notes: []
 }
-export const notesReducer = (state:NotesState = initialState, action: Action) => {
+export const notesReducer = (state:NotesState = defaultrootState, action: ActionNote) => {
     switch(action.type){
         case 'ADD_NOTE': {
             return {...state, notes: [...state.notes, action.payload] }

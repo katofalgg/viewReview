@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import classes from './TOP250.module.css';
 import {sendRequest} from '../Request';
 import Modal from '../Modal/Modal';
+import Loader from '../Comman/Loader';
 
 interface IContentProps {
     optionalArgument?: string;
@@ -15,7 +16,6 @@ const Content: React.FC<IContentProps & React.HTMLAttributes<HTMLDivElement>> = 
     const [modalFilm, setModalFilm] = useState({nameRu: '', year: '', filmLength: '', rating:'', genres: [{ genre: ''}]})
 
     const requestURL = `https://kinopoiskapiunofficial.tech/api/v2.2/films/top?type=TOP_250_BEST_FILMS&page=${page}`
-
     useEffect(() => {
         sendRequest('GET', requestURL)
         .then(response => {
@@ -37,7 +37,7 @@ const openModal = (element) => {
     return(
         <>
             <div className={classes.container}>
-            <ul>
+            {loaded ? <ul>
             {films.map(element => (
             <li className={classes.sign}>     
                 <Modal active={modalActive} setActive={setModalActive} >
@@ -53,7 +53,8 @@ const openModal = (element) => {
                 </figure>
             </li>
             ))}
-            </ul>
+            </ul> : <Loader/>}
+            
         </div>
         </>
     )

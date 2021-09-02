@@ -9,10 +9,12 @@ import { SearchContext } from "../Comman/SearchContext";
 
 const Main: React.FC = () => {
   const {activeSearch} = useContext(SearchContext);
+
   const gradients1 = [
       ['#F39BA7 ', '#8D9FEC'],
       ['#95D0F7', '#FBC1C9'],
     ];
+    
   return(
       <div className={classes.main}>
       <div className={classes.gradient}>

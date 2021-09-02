@@ -1,0 +1,58 @@
+@import '../_variables.scss';
+
+.main_field {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1%;
+    h1 {
+        color:$colorBackground;
+    }
+    textarea {
+        width: 500px;
+        height: 300px;
+        outline: none;
+        -moz-appearance: none;
+        border: 1px solid #999;
+        resize: none;
+        font-size: 110%;
+        margin-top: 1%;
+        padding: 0.3%;
+        border-width: 1.5px;
+        border-color: $colorBackground;
+        border-radius: 3%;   
+    }
+    button {
+        background-color: $colorButton;
+        color: $colorLight; 
+        border-width: 1px;
+        font-size: 12px; 
+        width: 80px;
+        height: 40px;
+        margin: 10px;
+        align-items: center;
+        justify-content: center;
+        border-radius: 10px;
+    }
+    .sign {
+        padding: 15px; 
+        margin: 20px;  
+        justify-content: center;
+        min-width: 20vw;
+        min-height: 20vw;
+        display: flex;
+        align-items: center;
+        align-content: center;
+        flex-direction: column;
+        background-color:$colorSign;
+        border: 3px solid $colorBackground;
+        border-radius: 2%;
+        white-space: pre-line;
+    }
+    ul {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        
+    } 
+}

@@ -1,6 +1,5 @@
 import React from "react";
 import app from "../Login/base";
-import { NotesState } from "../../Redux/notesReducer";
 import { useSelector, useDispatch } from "react-redux";
 import { NewNoteInput } from "./NewNoteInput";
 import { addNote } from '../../Redux/actions';
@@ -9,9 +8,9 @@ import classes from './Account.module.css'
 
 const Home:React.FC = () => {
   
-  const notes = useSelector<NotesState, NotesState["notes"]>(
-    (state) => state.notes
-  );
+  const notes = useSelector(
+    /* @ts-ignore */
+    (state) => state.notes.notes);
   const dispatch = useDispatch();
 
   const onAddNote = (note: string) => {
@@ -24,9 +23,9 @@ const Home:React.FC = () => {
       <NewNoteInput  addNote={onAddNote}/>
       
       <ol>
-        {notes.map((note) => {
+        {notes.length > 0 ? notes.map((note) => {
           return <li key={note}>{note}</li>;
-        })}
+        }) : <h3>Фильмы отсутсвуют</h3>}
       </ol>
       </div>
       <div className={classes.info}>
@@ -38,3 +37,4 @@ const Home:React.FC = () => {
 };
 
 export default Home;
+
