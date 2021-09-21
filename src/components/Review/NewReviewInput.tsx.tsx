@@ -11,8 +11,10 @@ const NewReviewInput: React.FC <NewReviewInputProps> = ({addReview}) => {
       setReviewText(event.target.value);
     }
     const onAddReviewClick = () => {
-      addReview(reviewText);
-      setReviewText('');
+      if (reviewText) {
+        addReview(reviewText);
+        setReviewText('');
+      }
     }
     return(   
       <>

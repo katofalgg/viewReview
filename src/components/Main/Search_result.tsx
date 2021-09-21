@@ -17,7 +17,7 @@ const Search_result: React.FC  = () => {
     return(
         <> 
         <div className={s.search_container}>
-        <h1>Результат поиса по запросу {searchEntry}</h1>
+        <h1>Результат поиса по запросу: "{searchEntry}"</h1>
         <div>
             {loaded ? <ul>
             {films.map(element => (
