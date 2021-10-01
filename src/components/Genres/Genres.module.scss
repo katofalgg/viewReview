@@ -3,13 +3,13 @@
 @import '../TOP250/TOP250.module.scss';
 
 
-
-.order{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    @include sign();
+.order {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  @include sign();
 }
-.oorder_button {
-    flex-direction: row;
+
+.order_button {
+  flex-direction: row;
 }

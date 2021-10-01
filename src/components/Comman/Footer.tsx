@@ -4,13 +4,13 @@ import classes from './Comman.module.css'
 
 
 const Footer: React.FC = () => {
-    return(
+    return (
         <footer className={classes.footer}>
-        <div className="site-footer">
-        <p>© Katofalgg, 2021</p>
-        <p>Сайт для поиска рецензий</p>
-        </div>
-             
+            <div className="site-footer">
+                <p>© Katofalgg, 2021</p>
+                <p>Сайт для поиска рецензий</p>
+            </div>
+
         </footer>
     )
 }

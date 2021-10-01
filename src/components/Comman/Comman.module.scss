@@ -5,6 +5,7 @@
   margin: 0;
   font-family: "Andale Mono", "monospace";
 }
+
 .main {
   display: grid;
   grid-template-columns: 1fr 8fr 1fr;
@@ -12,42 +13,49 @@
   width: 100vw;
   min-height: 100vh;
   min-width: 583px;
+
   .header {
     grid-column-start: 2;
     grid-column-end: 3;
     grid-row: 1;
     display: flex;
     justify-content: center;
-    background-color: $colorBackground;  
+    background-color: $colorBackground;
     width: 100%;
-    height: 100%; 
+    height: 100%;
     padding-top: 1%;
     padding-bottom: 1%;
+
     .theme_button {
       padding-top: 15px;
+
       img {
         width: 90%;
         height: 90%;
 
       }
+
       button {
         width: 30px;
-        height: 30px;  
-        background-color: $colorLight;     
+        height: 30px;
+        background-color: $colorLight;
       }
     }
+
     .search {
       display: flex;
       padding: 10px;
       width: 150px;
       height: 50px;
-      .search_field{
+
+      .search_field {
         width: 100px;
         border: 0;
       }
 
       .search_link {
         background-color: $colorButton;
+
         svg {
           padding-top: 6px;
         }
@@ -61,7 +69,7 @@
       @media screen and (min-width: 1200px) {
         font-size: $font-size;
         padding-right: $padding;
-        padding-left: $padding;  
+        padding-left: $padding;
       }
       @media screen and (min-width: 992px) and (max-width: 1132px) {
         font-size: $font-size - 5px;
@@ -77,17 +85,19 @@
         font-size: 0;
       }
     }
+
     .navbar {
       display: flex;
       justify-content: baseline;
       justify-content: space-between;
       padding-top: 18px;
+
       .navlink {
         color: $colorLight;
         font-size: $a-size;
         font-family: 'Georgia', 'serif';
         display: inline-block;
-        
+
         text-decoration: none;
         padding: 10px;
         overflow: hidden;
@@ -113,21 +123,23 @@
     flex: 1;
     border-top-left-radius: 20px;
     border-top-right-radius: 20px;
+
     .button {
       background-color: $colorButton;
-      color: $colorLight; 
+      color: $colorLight;
       border-width: 1px;
       font-size: 12px;
       display: flex;
-      float:left; 
+      float: left;
       width: 80px;
       height: 50px;
       margin: 10px;
       align-items: center;
       justify-content: center;
-      border-radius: 10px; 
+      border-radius: 10px;
     }
-    ul{
+
+    ul {
       display: flex;
       justify-content: space-around;
       justify-items: end;
@@ -135,44 +147,45 @@
       flex-wrap: wrap;
       padding-bottom: 100px;
       flex: 1;
-      
-    }  
+
+    }
   }
+
   .empty_space_left {
     grid-column: 1;
     grid-row-start: 1;
     grid-row-end: 4;
-    background-color:$colorBackground;
+    background-color: $colorBackground;
   }
 
   .empty_space_right {
     grid-column: 3;
     grid-row-start: 1;
     grid-row-end: 4;
-    background-color:$colorBackground;
+    background-color: $colorBackground;
   }
 
-  
+
   .footer {
     grid-column: 1/4;
     grid-row: 4;
-    background-color:$colorBackground;
+    background-color: $colorBackground;
     justify-content: center;
     padding: 10px;
-    flex: 1; 
+    flex: 1;
 
     p {
-      color: $colorLight; 
+      color: $colorLight;
       font-size: 10px;
       justify-content: center;
       display: flex;
-    } 
-     
+    }
+
   }
-  
+
 }
 
-.loader{
+.loader {
   border: 16px solid #f3f3f3;
   border-top: 16px solid #051c33;
   border-radius: 50%;
@@ -183,6 +196,7 @@
   margin-right: auto;
   margin-top: 100px;
 }
+
 @keyframes spin {
   0% {
     transform: rotate(0deg);

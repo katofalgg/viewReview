@@ -1,5 +1,5 @@
 import Navbar from "./Navbar";
-import React, { Component, useState } from 'react'
+import React from 'react'
 import Form from "./Form";
 import classes from './Comman.module.css'
 
@@ -9,7 +9,7 @@ const Header: React.FC = () => {
         <div className={classes.header}>
             <Navbar/>
             <h1 className={classes.title}>ViewReview</h1>
-            <Form/>     
+            <Form/>
         </div>
     )
 }

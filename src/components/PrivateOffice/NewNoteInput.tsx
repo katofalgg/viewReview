@@ -1,6 +1,6 @@
 import React from "react";
-import { ChangeEvent } from "react";
-import { useState } from "react";
+import {ChangeEvent} from "react";
+import {useState} from "react";
 
 interface NewNoteInputProps {
     addNote(note: string): void;
@@ -9,30 +9,30 @@ interface NewNoteInputProps {
 export const NewNoteInput: React.FC<NewNoteInputProps> = ({addNote}) => {
     const [note, setNote] = useState('')
 
-  const updateNote = (event: ChangeEvent<HTMLInputElement>) => {
-    setNote(event.target.value);
-  }
-  const onAddNoteClick = () => {
-    addNote(note);
-    setNote('');
-  }
-  const keyPressHandler = (e: React.KeyboardEvent) => {
-    if (e.key === 'Enter'){
-        onAddNoteClick()
+    const updateNote = (event: ChangeEvent<HTMLInputElement>) => {
+        setNote(event.target.value);
     }
-  }
-    return(
+    const onAddNoteClick = () => {
+        addNote(note);
+        setNote('');
+    }
+    const keyPressHandler = (e: React.KeyboardEvent) => {
+        if (e.key === 'Enter') {
+            onAddNoteClick()
+        }
+    }
+    return (
         <>
-        <h2>Список фильмов для просмотра</h2>
-        <input 
-        type='text'
-        name='note'
-        placeholder='Добавить фильм'
-        onChange={updateNote}
-        value={note}
-        onKeyPress={keyPressHandler}
-      />
-      <button onClick={onAddNoteClick} >Добавить</button>
-    </>
+            <h2>Список фильмов для просмотра</h2>
+            <input
+                type='text'
+                name='note'
+                placeholder='Добавить фильм'
+                onChange={updateNote}
+                value={note}
+                onKeyPress={keyPressHandler}
+            />
+            <button onClick={onAddNoteClick}>Добавить</button>
+        </>
     )
 };

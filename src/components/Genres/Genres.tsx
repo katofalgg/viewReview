@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import {useState, useEffect} from "react";
 import Loader from "../Comman/Loader";
 import {sendRequest} from '../Request';
 import s from '../Comman/Comman.module.css';
@@ -18,7 +18,7 @@ const Genres: React.FC = () => {
         {name: 'Драма', id: 8},
         {name: 'Комедия', id: 6},
         {name: 'Фантастика', id: 2},
-    ] 
+    ]
     const requestURL = `https://kinopoiskapiunofficial.tech/api/v2.1/films/search-by-filters?genre=${genreID}&page=${page}`;
 
     const filmsFetch = async () => await sendRequest('GET', requestURL)
@@ -26,43 +26,43 @@ const Genres: React.FC = () => {
             return response.films;
         }).catch(error => {
             console.log(
-              "error",
-              error
+                "error",
+                error
             );
         });
 
-useEffect(() => { 
-    setLoaded(false);
-    const fetch = async() => {
-         filmsFetch().then(films => {
-            setFilms(films);
-            setLoaded(true);
-         })
-    }
-    fetch()
-    setPage(1)
-}, [genreID])
+    useEffect(() => {
+        setLoaded(false);
+        const fetch = async () => {
+            filmsFetch().then(films => {
+                setFilms(films);
+                setLoaded(true);
+            })
+        }
+        fetch()
+        setPage(1)
+    }, [genreID])
 
-useEffect(() => {
-    setLoaded(false);
-    const fetch = async() => {
-        filmsFetch().then(arr => {
-           setFilms([...films, ...arr])
-           setLoaded(true);
-        })
-   }
-   fetch()
-}, [page])
+    useEffect(() => {
+        setLoaded(false);
+        const fetch = async () => {
+            filmsFetch().then(arr => {
+                setFilms([...films, ...arr])
+                setLoaded(true);
+            })
+        }
+        fetch()
+    }, [page])
 
-    return(
-        <div className={classes.order} > 
+    return (
+        <div className={classes.order}>
             <div className={classes.order_button}>
-            {genres.map(genreList => (
-                <button className={s.button} onClick={() => setGenreID(genreList.id)}>{genreList.name}</button>  
-            ))} 
+                {genres.map(genreList => (
+                    <button key={genreList.id}className={s.button} onClick={() => setGenreID(genreList.id)}>{genreList.name}</button>
+                ))}
             </div>
-            {loaded ? <GenresPict films={films}/> : <Loader/>}    
-            <button className={s.button} onClick={() => setPage(page + 1)}>{"Показать ещё"}</button> 
+            {loaded ? <GenresPict films={films}/> : <Loader/>}
+            <button className={s.button} onClick={() => setPage(page + 1)}>{"Показать ещё"}</button>
         </div>
     )
 }
