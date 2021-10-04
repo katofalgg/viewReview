@@ -2,9 +2,10 @@ import React, {useCallback} from "react";
 import {withRouter} from "react-router";
 import app from "./base";
 import classes from './Login.module.css'
+import { History } from 'history';
 
 interface ISignUpProp {
-    history: any,
+    history: History,
 }
 
 const SignUp: React.FC<ISignUpProp> = ({history}) => {

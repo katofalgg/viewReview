@@ -3,7 +3,7 @@ import "./Modal.css";
 
 interface IModalProps {
     active: boolean,
-    setActive: any,
+    setActive: (active: boolean) => void,
 };
 const Modal: React.FC<IModalProps> = ({active, setActive, children}) => {
 

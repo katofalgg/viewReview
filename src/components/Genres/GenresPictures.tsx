@@ -1,9 +1,10 @@
 import React, {useState} from "react";
 import s from './Genres.module.css';
 import Modal from '../Modal/Modal';
+import { elementType } from "../Main/Search_result";
 
 interface IGenrProps {
-    films: Record<string, any>[]
+    films: elementType[]
 }
 
 const GenresPict: React.FC<IGenrProps> = ({films}) => {

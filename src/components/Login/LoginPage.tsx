@@ -3,9 +3,10 @@ import {withRouter, Redirect} from "react-router";
 import app from './base'
 import {AuthContext, AuthContextType} from './Auth';
 import classes from './Login.module.css';
+import { History } from 'history';
 
 interface ISignINProp {
-    history: any,
+    history: History,
 }
 
 const LoginPage: React.FC<ISignINProp> = ({history}) => {
